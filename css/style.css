@@ -143,16 +143,16 @@ header .wrap{flex-wrap:wrap;padding-top:8px;padding-bottom:8px}nav{order:3;width
 .gc small{color:var(--green)}
 .stars{color:#e0a100}
 nav a:hover,nav a[aria-current]{border-color:var(--lime)}
-.teal .btn{background:var(--lime);color:#2a3a05!important;border-color:var(--lime)}.teal .btn:hover{background:#fff}
+
 footer h3{color:var(--lime)}footer a:hover{color:var(--lime)}
 .small{border-top-color:rgba(182,214,25,.35)}
 summary{color:var(--plum)}details[open]{border-color:var(--green)}
 
 /* CTA band: background image, centered */
 .teal{display:block;position:relative;padding:92px 24px;text-align:center;border-radius:var(--r);overflow:hidden;color:#fff;background:linear-gradient(rgba(25,18,14,.5),rgba(25,18,14,.5)),url(../images/cta-bg.png) center/cover no-repeat,#2f2722}
-.cta-t{text-align:center}.cta-t h2{color:#fff;margin:0 0 8px}.cta-t p{color:#fff;margin:0 0 26px;opacity:.95}
-.cta-t .btn{background:transparent;color:#fff!important;border:2px solid #fff;border-radius:6px;padding:13px 34px}
-.cta-t .btn:hover{background:#fff;color:#2a1a24!important;transform:none}
+.cta-t{text-align:center}.teal h2{color:#fff;margin:0 0 8px}.teal p{color:#fff;margin:0 auto 26px;max-width:560px;text-align:center;opacity:.95}
+.teal .btn{background:transparent!important;color:#fff!important;border:2px solid #fff!important;border-radius:999px;padding:13px 36px}
+.teal .btn:hover{background:#fff!important;color:#2a1a24!important;transform:none}
 .cta-f{list-style:none;margin:34px 0 0;padding:0;display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
 .cta-f li{display:flex;align-items:center;gap:10px;color:#fff;font-weight:500;font-size:14px}
 .cta-f i{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);display:grid;place-items:center;font-style:normal;font-size:13px}
