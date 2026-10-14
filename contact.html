@@ -17,14 +17,14 @@
 <section><div class="wrap grid2">
 <div><h2>Reach out to us today</h2>
 <p><b>Phone:</b> <a href="tel:+919096827135">+91 90968 27135</a></p>
-<p><b>Address:</b> श्रेया स्किन & हेअर केअर क्लिनिक, Main Kacheri Road, Ahilyadevi Chowk, Khandala, Maharashtra 412802</p>
+<p><b>Address:</b> Shreya Skin & Hair Care Clinic, Main Kacheri Road, Ahilyadevi Chowk, Khandala, Maharashtra 412802</p>
 <p><b>Hours:</b> Mon–Fri 10 am–2 pm & 5–8 pm<br>Sun 10 am–8 pm<br>Saturday closed</p>
 <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Shreya+Skin+and+Hair+Care+Clinic+Khandala" target="_blank" rel="noopener">Get Directions</a></div>
-<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Message sent'">
-<input placeholder="Full name" aria-label="Full name" required><input placeholder="Phone number" aria-label="Phone number" type="tel" required>
-<select aria-label="Select service"><option>Select service</option><option>Acne & pimples</option><option>Pigmentation & dark spots</option><option>Psoriasis / skin disease</option><option>Fungal infection & allergy</option><option>Hair fall & scalp care</option><option>Other</option></select>
-<textarea rows="4" placeholder="Tell us about your concern" aria-label="Message"></textarea>
-<button class="btn" type="submit">Send Message</button></form>
+<form id="bkf">
+<input name="name" placeholder="Full name" aria-label="Full name" required><input name="phone" placeholder="Phone number" aria-label="Phone number" type="tel" required>
+<select name="service" aria-label="Select service" required><option value="">Select service</option><option>Acne & pimples</option><option>Pigmentation & dark spots</option><option>Psoriasis / skin disease</option><option>Fungal infection & allergy</option><option>Hair fall & scalp care</option><option>Other</option></select>
+<textarea name="msg" rows="4" placeholder="Tell us about your concern" aria-label="Message"></textarea>
+<button class="btn wa" type="submit">Send Message</button></form>
 </div></section>
 <section class="alt"><div class="wrap"><h2>Find us on the map</h2>
 <div class="map-embed">
@@ -34,5 +34,12 @@
 
 <script src="js/footer.js"></script>
 <script src="js/main.js"></script>
+<script>
+document.getElementById('bkf').addEventListener('submit',function(e){
+e.preventDefault();var f=e.target,v=function(n){return (f.elements[n]?f.elements[n].value.trim():'')};
+var t='Appointment request%0AName: '+encodeURIComponent(v('name'))+'%0APhone: '+encodeURIComponent(v('phone'))+'%0AService: '+encodeURIComponent(v('service'))+(v('msg')?'%0AMessage: '+encodeURIComponent(v('msg')):'');
+window.open('https://wa.me/919096827135?text='+t,'_blank','noopener');
+});
+</script>
 </body>
 </html>
