@@ -224,3 +224,9 @@ footer{padding:56px 0 20px}
 
 /* service card photos */
 .svc-img{width:100%;height:180px;object-fit:cover;display:block;border-radius:var(--r) var(--r) 0 0}
+.hero.sm{
+  min-height:320px;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(180deg,rgba(251,248,243,.96) 0%,rgba(251,248,243,.88) 55%,rgba(251,248,243,.45) 100%),url(../images/hero-banner.jpg) center/cover no-repeat,url(../images/banner.jpg) center top/cover no-repeat,var(--cream)
+}
