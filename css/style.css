@@ -174,8 +174,9 @@ summary{color:var(--plum)}details[open]{border-color:var(--green)}
 .gt-form .btn.wa{width:100%;background:var(--green);border-color:var(--green);margin-top:4px}
 .gt-form .btn.wa:hover{background:var(--green-d);border-color:var(--green-d)}
 .gt-form .bkn{text-align:center;margin:10px 0 0}
-.gt-photo{border-radius:var(--r);overflow:hidden;min-height:340px;background:var(--cream)}
-.gt-photo img,.gt-photo iframe{width:100%;height:100%;min-height:340px;border:0;object-fit:cover;display:block}
+.gt{align-items:center}
+.gt-photo{display:flex;align-items:flex-start;justify-content:center}
+.gt-photo img{width:100%;height:auto;max-height:none;object-fit:contain;border-radius:16px;display:block}
 /* footer */
 footer{padding:56px 0 20px}
 .ft{display:grid;grid-template-columns:1.2fr .8fr 1.5fr .6fr;gap:0}
@@ -194,3 +195,32 @@ footer{padding:56px 0 20px}
 .map-embed{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
 .map-embed iframe{display:block;width:100%;height:450px;border:0}
 @media(max-width:600px){.map-embed iframe{height:320px}}
+
+/* booking section: equal-height columns with clinic timings */
+.gt{align-items:stretch}
+.gt-info{display:flex;flex-direction:column;justify-content:space-between;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:36px 32px}
+.gt-info h2{margin-bottom:8px}
+.timing-list{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}
+.timing-row{display:flex;flex-direction:column;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}
+.timing-row:last-child{border-bottom:0}
+.timing-row .day{font-size:14px;color:var(--muted)}
+.timing-row .time{font-family:"Playfair Display",serif;font-size:24px;font-weight:700;color:var(--teal)}
+.gt-photo{position:relative;min-height:320px}
+.gt-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* fix: equal columns, tighter timing spacing */
+.gt{grid-template-columns:1fr 1fr 1fr;align-items:stretch}
+.gt-info{padding:32px 28px}
+.timing-list{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.timing-row{padding:20px 0}
+.gt-photo{min-height:0;height:100%}
+.gt-photo img{object-position:center}
+@media(max-width:900px){.gt{grid-template-columns:1fr}}
+
+/* booking info: heading and intro text above timings */
+.gt-info .eyebrow{color:var(--green)}
+.gt-info h2{font-size:clamp(28px,3vw,36px);line-height:1.2;margin:0 0 14px}
+.gt-info .gt-lead{font-size:15px;color:var(--muted);margin:0 0 8px}
+
+/* service card photos */
+.svc-img{width:100%;height:180px;object-fit:cover;display:block;border-radius:var(--r) var(--r) 0 0}
